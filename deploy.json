@@ -1,0 +1,8 @@
+{
+    "postPull": [
+        "rm -rf node_modules",
+        "yarn",
+        "yarn update-bl",
+        "yarn build"
+    ]
+}
