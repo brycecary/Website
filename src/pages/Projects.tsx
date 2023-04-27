@@ -18,6 +18,13 @@ const projects: IProject[] = [
         active: true,
     },
     {
+        name: "Deploy",
+        description: "Lightweight script for automatically deploying repos.",
+        url: "https://github.com/brycecary/Deploy",
+        tags: ["Public", "Node", "JS/TS", "GitHub", "Webhooks"],
+        active: true,
+    },
+    {
         name: "River Hawk Website",
         description: "A website for the River Hawk Chapter of Nentico Lodge 12, Order of the Arrow.",
         url: "https://riverhawkoa.org",
@@ -35,7 +42,7 @@ const projects: IProject[] = [
         name: "FRC Robot Software",
         description: "Software for the FIRST Robotics Competition (FRC) 2019-2021 seasons.",
         url: "https://github.com/cavineers",
-        tags: ["Java", "Gradle", "WPILib", "FRC"],
+        tags: ["Public", "Java", "Gradle", "WPILib", "FRC"],
         active: false,
     },
 ];
