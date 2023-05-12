@@ -25,7 +25,7 @@ function TabPanel(props: TabPanelProps) {
     );
 }
 
-export default function VerticalTabs() {
+export default function App() {
     const [value, setValue] = React.useState(window.location.pathname ?? "/");
 
     const handleChange = (event: React.SyntheticEvent, newValue: string) => {
