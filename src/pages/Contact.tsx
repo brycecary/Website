@@ -43,7 +43,7 @@ const contactLinks: IContact[] = [
     },
     {
         name: "Twitter",
-        url: "https://twitter.com/TopMastered",
+        url: "https://twitter.com/brycecary_",
         icon: Twitter,
     },
     {
