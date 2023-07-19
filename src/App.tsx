@@ -16,20 +16,18 @@ interface TabPanelProps {
 }
 
 function TabPanel(props: TabPanelProps) {
-    const { children, value, index, ...other } = props;
-
     return (
-        <div role="tabpanel" hidden={value !== index} id={`vertical-tabpanel-${index}`} aria-labelledby={`vertical-tab-${index}`} {...other}>
-            {value === index && <Box sx={{ mt: 4 }}>{children}</Box>}
+        <div role="tabpanel" hidden={props.value !== props.index} id={`vertical-tabpanel-${props.index}`} aria-labelledby={`vertical-tab-${props.index}`} >
+            {props.value === props.index && <Box sx={{ mt: 4 }}>{props.children}</Box>}
         </div>
     );
 }
 
 export default function App() {
-    const [value, setValue] = React.useState(window.location.pathname ?? "/");
+    const [page, setPage] = React.useState(window.location.pathname ?? "/");
 
-    const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-        setValue(newValue);
+    const handleChange = (event: React.SyntheticEvent, newPage: string) => {
+        setPage(newPage);
     };
 
     return (
@@ -41,18 +39,20 @@ export default function App() {
 
                 <Box sx={{ minHeight: "75%" }}>
                     <Router>
-                        <Tabs orientation="horizontal" value={value} onChange={handleChange} aria-label="Vertical tabs example" centered>
+                        {/* <Tabs orientation="horizontal" value={value} onChange={handleChange} centered>
                             <Tab value="/" label="About" component={Link} to="/" />
                             <Tab value="/projects" label="Projects" component={Link} to="/projects" />
                             <Tab value="/contact" label="Contact" component={Link} to="/contact" />
-                        </Tabs>
-                        <TabPanel value={value} index={"/"}>
+                        </Tabs> */}
+                        <TabPanel value={page} index={"/"}>
                             <About />
+                            <Projects />
+                            <Contact />
                         </TabPanel>
-                        <TabPanel value={value} index={"/projects"}>
+                        <TabPanel value={page} index={"/projects"}>
                             <Projects />
                         </TabPanel>
-                        <TabPanel value={value} index={"/contact"}>
+                        <TabPanel value={page} index={"/contact"}>
                             <Contact />
                         </TabPanel>
                     </Router>

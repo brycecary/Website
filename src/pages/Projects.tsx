@@ -49,41 +49,41 @@ const projects: IProject[] = [
 
 export default function Projects() {
     return (
-        <Box>
+        <Box sx={{ mt: 4 }}>
             <Typography variant="h2" component="h1" gutterBottom>
                 Projects
             </Typography>
-            {projects.map((project) => (
-                <Paper key={project.name} elevation={2} sx={{ p: 4, mb: 4 }}>
-                    <Grid container spacing={2}>
-                        <Grid item xs={12} md={10}>
-                            <Typography variant="h3" component="h2" gutterBottom>
-                                {project.name}
-                            </Typography>
-                            <Typography variant="body1" gutterBottom>
-                                {project.description}
-                            </Typography>
-                            <Grid container spacing={1} sx={{ mt: 3 }}>
-                                <Grid item>
-                                    <Chip variant="outlined" label={project.active ? "Active" : "Inactive"} color={project.active ? "success" : "warning"} />
-                                </Grid>
-                                {project.tags.map((tag) => (
-                                    <Grid item key={tag}>
-                                        <Chip variant="outlined" label={tag} />
+            <Stack direction="row" useFlexGap flexWrap="wrap" spacing={1} justifyContent={"space-evenly"}>
+                {projects.map((project) => (
+                    <Paper key={project.name} elevation={2} sx={{ p: 4, maxWidth: { xs: "100%", md: "48%" } }}>
+                        <Grid container>
+                            <Grid item xs={12} md={9}>
+                                <Typography variant="h4" gutterBottom>
+                                    {project.name}
+                                </Typography>
+                                <Typography variant="body1" gutterBottom>
+                                    {project.description}
+                                </Typography>
+                                <Grid container spacing={1} sx={{ mt: 3 }}>
+                                    <Grid item>
+                                        <Chip variant="outlined" label={project.active ? "Active" : "Inactive"} color={project.active ? "success" : "warning"} />
                                     </Grid>
-                                ))}
+                                    {project.tags.map((tag) => (
+                                        <Grid item key={tag}>
+                                            <Chip variant="outlined" label={tag} />
+                                        </Grid>
+                                    ))}
+                                </Grid>
                             </Grid>
-                        </Grid>
-                        <Grid item xs={12} md={2}>
-                            <Stack spacing={3}>
+                            <Grid item xs={12} md={3}>
                                 <Button variant="outlined" href={project.url} startIcon={<OpenInNewIcon />} target="_blank" fullWidth>
                                     View
                                 </Button>
-                            </Stack>
+                            </Grid>
                         </Grid>
-                    </Grid>
-                </Paper>
-            ))}
+                    </Paper>
+                ))}
+            </Stack>
         </Box>
     );
 }

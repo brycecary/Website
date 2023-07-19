@@ -1,5 +1,5 @@
-import { ContactMail, GitHub, LinkedIn, Twitter } from "@mui/icons-material";
-import { Button, ButtonGroup, SvgIcon, Typography, createSvgIcon } from "@mui/material";
+import { GitHub, LinkedIn, MailOutline, Twitter } from "@mui/icons-material";
+import { Box, IconButton, Stack, createSvgIcon } from "@mui/material";
 
 interface IContact {
     name: string;
@@ -34,7 +34,7 @@ const contactLinks: IContact[] = [
     {
         name: "contact@brycecary.dev",
         url: "mailto:contact@brycecary.dev",
-        icon: ContactMail,
+        icon: MailOutline,
     },
     {
         name: "GitHub",
@@ -65,17 +65,14 @@ const contactLinks: IContact[] = [
 
 export default function Contact() {
     return (
-        <>
-            <Typography variant="h2" component="h1" gutterBottom>
-                Contact
-            </Typography>
-            <ButtonGroup orientation="vertical" fullWidth disableElevation>
+        <Box sx={{ mt: 4 }}>
+            <Stack direction="row" spacing={2} justifyContent="center" sx={{ mb: 2 }}>
                 {contactLinks.map((contact) => (
-                    <Button key={contact.name} variant="outlined" href={contact.url} target="_blank" startIcon={<contact.icon />} fullWidth>
-                        {contact.name}
-                    </Button>
+                    <IconButton key={contact.name} href={contact.url} target="_blank" size="large">
+                        <contact.icon />
+                    </IconButton>
                 ))}
-            </ButtonGroup>
-        </>
+            </Stack>
+        </Box>
     );
 }
