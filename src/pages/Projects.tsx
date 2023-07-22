@@ -56,7 +56,7 @@ export default function Projects() {
             <Stack direction="row" useFlexGap flexWrap="wrap" spacing={1} justifyContent={"space-evenly"}>
                 {projects.map((project) => (
                     <Paper key={project.name} elevation={2} sx={{ p: 4, maxWidth: { xs: "100%", md: "48%" } }}>
-                        <Grid container>
+                        <Grid container spacing={2}>
                             <Grid item xs={12} md={9}>
                                 <Typography variant="h4" gutterBottom>
                                     {project.name}
