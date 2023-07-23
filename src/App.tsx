@@ -1,9 +1,6 @@
 import { Container } from "@mui/material";
 import Box from "@mui/material/Box";
-import Tab from "@mui/material/Tab";
-import Tabs from "@mui/material/Tabs";
 import * as React from "react";
-import { Link, BrowserRouter as Router } from "react-router-dom";
 import Copyright from "./components/Copyright";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -17,7 +14,7 @@ interface TabPanelProps {
 
 function TabPanel(props: TabPanelProps) {
     return (
-        <div role="tabpanel" hidden={props.value !== props.index} id={`vertical-tabpanel-${props.index}`} aria-labelledby={`vertical-tab-${props.index}`} >
+        <div role="tabpanel" hidden={props.value !== props.index} id={`vertical-tabpanel-${props.index}`} aria-labelledby={`vertical-tab-${props.index}`}>
             {props.value === props.index && <Box sx={{ mt: 4 }}>{props.children}</Box>}
         </div>
     );
@@ -31,35 +28,34 @@ export default function App() {
     };
 
     return (
-        <Box sx={{ flexGrow: 1, bgcolor: "background.paper", display: "flex", minHeight: "100vh" }}>
-            <Container>
-                <Box sx={{ textAlign: "center", mt: 2 }}>
-                    <img src="//assets.brycecary.dev/banner/v2/banner_v2_blue.png" alt="Bryce Cary" style={{ width: "60%", height: "auto", userSelect: "none" }} draggable={false} />
-                </Box>
+        <Box sx={{ flexGrow: 1, display: "flex", minHeight: "100vh", background: "radial-gradient(circle, rgba(45,121,190,1) 0%, rgba(28,37,65,1) 100%)", m: 0 }}>
+            <Box
+                sx={{
+                    background: "rgba(4, 7, 16, 0.9)",
+                    boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                    backdropFilter: "blur(8px)",
+                    width: "100vw",
+                    height: "100vh",
+                    m: 0,
+                    overflow: "hidden",
+                }}
+            >
+                <Box sx={{ height: "100vh", width: "100vw", display: "flex", overflowY: "auto", flexDirection: "column" }}>
+                    <Container sx={{ flex: "1 0 auto" }}>
+                        <Box sx={{ textAlign: "center", mt: 2 }}>
+                            <img src="//assets.brycecary.dev/banner/v2/banner_v2_blue.png" alt="Bryce Cary" style={{ width: "60%", height: "auto", userSelect: "none" }} draggable={false} />
+                        </Box>
 
-                <Box sx={{ minHeight: "75%" }}>
-                    <Router>
-                        {/* <Tabs orientation="horizontal" value={value} onChange={handleChange} centered>
-                            <Tab value="/" label="About" component={Link} to="/" />
-                            <Tab value="/projects" label="Projects" component={Link} to="/projects" />
-                            <Tab value="/contact" label="Contact" component={Link} to="/contact" />
-                        </Tabs> */}
-                        <TabPanel value={page} index={"/"}>
-                            <About />
-                            <Projects />
-                            <Contact />
-                        </TabPanel>
-                        <TabPanel value={page} index={"/projects"}>
-                            <Projects />
-                        </TabPanel>
-                        <TabPanel value={page} index={"/contact"}>
-                            <Contact />
-                        </TabPanel>
-                    </Router>
-                </Box>
+                        <About />
+                        <Projects />
+                        <Contact />
+                    </Container>
 
-                <Copyright />
-            </Container>
+                    <Box sx={{ flexShrink: "0" }}>
+                        <Copyright />
+                    </Box>
+                </Box>
+            </Box>
         </Box>
     );
 }

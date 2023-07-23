@@ -7,7 +7,7 @@ const theme = createTheme({
         },
         mode: "dark",
         background: {
-            paper: "#171618",
+            paper: "#040710",
         },
     },
 });

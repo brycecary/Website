@@ -1,5 +1,5 @@
 import { GitHub, LinkedIn, MailOutline, Twitter } from "@mui/icons-material";
-import { Box, IconButton, Stack, createSvgIcon } from "@mui/material";
+import { Box, IconButton, Stack, Tooltip, createSvgIcon } from "@mui/material";
 
 interface IContact {
     name: string;
@@ -68,9 +68,11 @@ export default function Contact() {
         <Box sx={{ mt: 4 }}>
             <Stack direction="row" spacing={2} justifyContent="center" sx={{ mb: 2 }}>
                 {contactLinks.map((contact) => (
-                    <IconButton key={contact.name} href={contact.url} target="_blank" size="large">
-                        <contact.icon />
-                    </IconButton>
+                    <Tooltip key={contact.name} title={contact.name} placement="top">
+                        <IconButton href={contact.url} target="_blank" size="large">
+                            <contact.icon />
+                        </IconButton>
+                    </Tooltip>
                 ))}
             </Stack>
         </Box>
