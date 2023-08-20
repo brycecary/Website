@@ -58,7 +58,7 @@ const contactLinks: IContact[] = [
     },
     {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/brycecary/",
+        url: "https://www.linkedin.com/in/bryce-cary/",
         icon: LinkedIn,
     },
 ];
