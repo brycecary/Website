@@ -46,16 +46,16 @@ const contactLinks: IContact[] = [
         url: "https://twitter.com/brycecary_",
         icon: Twitter,
     },
-    {
-        name: "Twitch",
-        url: "https://twitch.tv/topmastered_",
-        icon: TwitchSVG,
-    },
-    {
-        name: "Discord",
-        url: "https://discord.gg/KZzEZ2X",
-        icon: DiscordSVG,
-    },
+    // {
+    //     name: "Twitch",
+    //     url: "https://twitch.tv/topmastered_",
+    //     icon: TwitchSVG,
+    // },
+    // {
+    //     name: "Discord",
+    //     url: "https://discord.gg/KZzEZ2X",
+    //     icon: DiscordSVG,
+    // },
     {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/bryce-cary/",
