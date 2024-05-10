@@ -1,4 +1,4 @@
-import { GitHub, LinkedIn, MailOutline, Twitter } from "@mui/icons-material";
+import { GitHub, LinkedIn, MailOutline, X as XIcon } from "@mui/icons-material";
 import { Box, IconButton, Stack, Tooltip, createSvgIcon } from "@mui/material";
 
 interface IContact {
@@ -42,9 +42,9 @@ const contactLinks: IContact[] = [
         icon: GitHub,
     },
     {
-        name: "Twitter",
-        url: "https://twitter.com/brycecary_",
-        icon: Twitter,
+        name: "X",
+        url: "https://x.com/brycecary_",
+        icon: XIcon,
     },
     // {
     //     name: "Twitch",

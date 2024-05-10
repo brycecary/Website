@@ -35,7 +35,7 @@ const projects: IProject[] = [
         name: "Nentico Lodge 12 Website",
         description: "A website for Nentico Lodge 12, Order of the Arrow.",
         url: "https://nentico.org",
-        tags: ["WordPress"],
+        tags: ["WordPress", "Bootstrap", "PHP"],
         active: true,
     },
     {
