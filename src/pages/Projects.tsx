@@ -1,5 +1,5 @@
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import { Box, Button, Chip, Grid, Paper, Stack, Typography } from "@mui/material";
+import { Box, Button, Chip, Grid, Paper, Typography } from "@mui/material";
 
 interface IProject {
     name: string;
@@ -53,37 +53,39 @@ export default function Projects() {
             <Typography variant="h2" component="h1" gutterBottom>
                 Projects
             </Typography>
-            <Stack direction="row" useFlexGap flexWrap="wrap" spacing={1} justifyContent={"space-evenly"}>
-                {projects.map((project) => (
-                    <Paper key={project.name} elevation={2} sx={{ p: 4, maxWidth: { xs: "100%", md: "48%" } }}>
-                        <Grid container spacing={2}>
-                            <Grid item xs={12} md={9}>
-                                <Typography variant="h4" gutterBottom>
-                                    {project.name}
-                                </Typography>
-                                <Typography variant="body1" gutterBottom>
-                                    {project.description}
-                                </Typography>
-                                <Grid container spacing={1} sx={{ mt: 3 }}>
-                                    <Grid item>
-                                        <Chip variant="outlined" label={project.active ? "Active" : "Inactive"} color={project.active ? "success" : "warning"} />
-                                    </Grid>
-                                    {project.tags.map((tag) => (
-                                        <Grid item key={tag}>
-                                            <Chip variant="outlined" label={tag} />
+            <Grid container spacing={2} alignItems={"stretch"} justifyContent={"center"}>
+                {projects.map((project, idx) => (
+                    <Grid item key={idx} xs={12} md={6}>
+                        <Paper sx={{ p: 2, height: "100%" }}>
+                            <Grid container spacing={2}>
+                                <Grid item xs={12} md={9}>
+                                    <Typography variant="h4" gutterBottom>
+                                        {project.name}
+                                    </Typography>
+                                    <Typography variant="body1" gutterBottom>
+                                        {project.description}
+                                    </Typography>
+                                    <Grid container spacing={1} sx={{ mt: 3 }}>
+                                        <Grid item>
+                                            <Chip variant="outlined" label={project.active ? "Active" : "Inactive"} color={project.active ? "success" : "warning"} />
                                         </Grid>
-                                    ))}
+                                        {project.tags.map((tag) => (
+                                            <Grid item key={tag}>
+                                                <Chip variant="outlined" label={tag} />
+                                            </Grid>
+                                        ))}
+                                    </Grid>
+                                </Grid>
+                                <Grid item xs={12} md={3}>
+                                    <Button variant="outlined" href={project.url} startIcon={<OpenInNewIcon />} target="_blank" fullWidth>
+                                        View
+                                    </Button>
                                 </Grid>
                             </Grid>
-                            <Grid item xs={12} md={3}>
-                                <Button variant="outlined" href={project.url} startIcon={<OpenInNewIcon />} target="_blank" fullWidth>
-                                    View
-                                </Button>
-                            </Grid>
-                        </Grid>
-                    </Paper>
+                        </Paper>
+                    </Grid>
                 ))}
-            </Stack>
+            </Grid>
         </Box>
     );
 }
