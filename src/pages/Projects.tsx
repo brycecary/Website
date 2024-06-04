@@ -18,6 +18,13 @@ const projects: IProject[] = [
         active: true,
     },
     {
+        name: "Compass Event Platform",
+        description: "An app for connecting event attendees to information in a reusable and intuitive environment.",
+        url: "https://compass-ep.com",
+        tags: ["Node", "Fastify", "React", "React Native", "JS/TS", "Postgres", "Docker"],
+        active: true,
+    },
+    {
         name: "Deploy",
         description: "Lightweight script for automatically deploying repos.",
         url: "https://github.com/brycecary/Deploy",
