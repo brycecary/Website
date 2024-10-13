@@ -42,12 +42,6 @@
         "eject": "react-scripts eject",
         "update-bl": "npx browserslist@latest --update-db"
     },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
     "browserslist": {
         "production": [
             ">0.2%",
