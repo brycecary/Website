@@ -13678,6 +13678,7 @@ __metadata:
     "@types/react-dom": "npm:18.3.1"
     "@types/react-router-dom": "npm:5.3.3"
     browserslist: "npm:4.24.0"
+    eslint-config-react-app: "npm:^7.0.1"
     postcss-normalize: "npm:13.0.1"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
