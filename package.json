@@ -1,32 +1,38 @@
 {
     "name": "website",
-    "version": "2.4.0",
+    "description": "Personal website",
+    "version": "2.5.0",
     "private": true,
+    "author": {
+        "name": "Bryce Cary",
+        "email": "contact@brycecary.dev",
+        "url": "https://brycecary.dev"
+    },
     "dependencies": {
         "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-        "@emotion/react": "11.11.4",
-        "@emotion/styled": "11.11.5",
-        "@fontsource/roboto": "5.0.13",
-        "@mui/icons-material": "5.15.19",
-        "@mui/material": "5.15.19",
-        "@testing-library/jest-dom": "6.4.5",
-        "@testing-library/react": "16.0.0",
+        "@emotion/react": "11.13.3",
+        "@emotion/styled": "11.13.0",
+        "@fontsource/roboto": "5.1.0",
+        "@mui/icons-material": "6.1.3",
+        "@mui/material": "6.1.3",
+        "@testing-library/jest-dom": "6.5.0",
+        "@testing-library/react": "16.0.1",
         "@testing-library/user-event": "14.5.2",
-        "@types/jest": "29.5.12",
-        "@types/node": "20.14.1",
-        "@types/react": "18.3.3",
-        "@types/react-dom": "18.3.0",
+        "@types/jest": "29.5.13",
+        "@types/node": "22.7.5",
+        "@types/react": "18.3.11",
+        "@types/react-dom": "18.3.1",
         "@types/react-router-dom": "5.3.3",
-        "postcss-normalize": "10.0.1",
+        "postcss-normalize": "13.0.1",
         "react": "18.3.1",
         "react-dom": "18.3.1",
-        "react-router-dom": "6.23.1",
+        "react-router-dom": "6.27.0",
         "react-scripts": "5.0.1",
-        "typescript": "5.4.5",
-        "web-vitals": "4.0.1"
+        "typescript": "5.6.3",
+        "web-vitals": "4.2.3"
     },
     "devDependencies": {
-        "browserslist": "4.23.0"
+        "browserslist": "4.24.0"
     },
     "scripts": {
         "start": "react-scripts start",
@@ -52,5 +58,6 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
-    }
+    },
+    "packageManager": "yarn@4.5.0"
 }
