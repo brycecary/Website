@@ -43,7 +43,7 @@ export default function App() {
                 <Box sx={{ height: "100vh", width: "100vw", display: "flex", overflowY: "auto", flexDirection: "column" }}>
                     <Container sx={{ flex: "1 0 auto" }}>
                         <Box sx={{ textAlign: "center", mt: 2 }}>
-                            <img src="//assets.brycecary.dev/banner/v2/banner_v2_blue.svg" alt="Bryce Cary" style={{ width: "60%", userSelect: "none" }} draggable={false} />
+                            <img src="//assets.brycecary.dev/banner/v2/banner_v2_blue.png" alt="Bryce Cary" style={{ width: "60%", userSelect: "none" }} draggable={false} />
                         </Box>
 
                         <About />
